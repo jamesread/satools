@@ -6,7 +6,7 @@ License:	GPL
 URL:		https://github.com/RedHatUKI/satools
 Source:		satools-juno.tar.gz
 BuildArch:	noarch
-Requires:	satools-odptools, python-imaging, python-ply, python-webpy, httpd, mod_wsgi
+Requires:	httpd, mod_wsgi, python-imaging, python-ply, python-webpy, satools-odptools = %{version}-%{release}
 BuildRequires:	redhat-rpm-config
 
 %define _srcdefattr (-,root,root)
