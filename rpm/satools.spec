@@ -1,6 +1,6 @@
 Name:		satools
 Version:	0.3
-Release:	1%{?dist}
+Release:	2
 Summary:	Red Hat UK&I SA tools
 License:	GPL
 URL:		https://github.com/RedHatUKI/satools
@@ -42,6 +42,10 @@ done
 %doc README.rst
 
 %changelog
+
+* Thu Jun 07 2012 Jim Minter <jminter@redhat.com> 0.3-2
+- Protect against short reads in sync-clearspace
+
 
 * Mon Mar 19 2012 Jim Minter <jminter@redhat.com> 0.3
 

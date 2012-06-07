@@ -1,6 +1,6 @@
 Name:		satools-search
 Version:	0.3
-Release:	1%{?dist}
+Release:	2
 Summary:	Red Hat UK&I SA tools list search engine
 License:	GPL
 URL:		https://github.com/RedHatUKI/satools
@@ -50,6 +50,9 @@ rm -rf %{buildroot}
 %doc README.rst
 
 %changelog
+
+* Thu Jun 07 2012 Jim Minter <jminter@redhat.com> 0.3-2
+- Scroll to top on new record select
 
 * Mon Mar 19 2012 Jim Minter <jminter@redhat.com> 0.3
 
