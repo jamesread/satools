@@ -45,7 +45,7 @@ done
 
 * Thu Jun 07 2012 Jim Minter <jminter@redhat.com> 0.3-2
 - Protect against short reads in sync-clearspace
-
+- Retry on HTTP 502 proxy errors in sync-clearspace
 
 * Mon Mar 19 2012 Jim Minter <jminter@redhat.com> 0.3
 
