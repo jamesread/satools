@@ -19,6 +19,7 @@ def parse_args():
     ap = argparse.ArgumentParser()
     ap.add_argument("-q", action = "store_true", dest = "quiet",
                     help = "quiet mode")
+    ap.add_argument("list", nargs = "?")
 
     return vars(ap.parse_args())
 
@@ -48,6 +49,9 @@ if __name__ == "__main__":
     lock = common.Lock(".lock")
     db = common.DB(".sync-db")
 
+    if not args["list"]:
+        thunderbird.init()
+
     now = time.gmtime()
 
     for line in config["lists-sync"]:
@@ -55,6 +59,9 @@ if __name__ == "__main__":
         
         url = line[0].rstrip("/")
         _list = url.split("/")[-1]
+
+        if args["list"] and _list != args["list"]:
+            continue
 
         credentials = None
         if len(line) == 3:

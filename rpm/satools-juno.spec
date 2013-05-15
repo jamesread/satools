@@ -1,9 +1,9 @@
 Name:		satools-juno
 Version:	0.4
-Release:	4
+Release:	6
 Summary:	Red Hat UK&I SA tools presentation search engine
 License:	GPL
-URL:		https://github.com/RedHatUKI/satools
+URL:		https://github.com/RedHatEMEA/satools
 Source:		satools-juno.tar.gz
 BuildArch:	noarch
 Requires:	httpd, mod_wsgi, python-imaging, python-webpy, satools-odptools = %{version}-%{release}
@@ -40,7 +40,6 @@ rm -rf %{buildroot}
 /bin/chmod 0701 /home/satools
 
 %post
-/bin/ln -s /home/satools/content/juno/root /opt/satools/juno/static 2>/dev/null
 /bin/ln -s /home/satools/content/juno/slides /opt/satools/juno/static 2>/dev/null
 /bin/ln -s /home/satools/content/juno/thumbs /opt/satools/juno/static 2>/dev/null
 /sbin/service httpd reload

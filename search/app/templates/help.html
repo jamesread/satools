@@ -31,7 +31,7 @@
     <p>This is the help page for SA tools list search 0.4, written
     by Jim Minter. SA tools list search and all its command line
     tooling are open-sourced at <a href=
-    "https://github.com/RedHatUKI/satools">https://github.com/RedHatUKI/satools</a>.
+    "https://github.com/RedHatEMEA/satools">https://github.com/RedHatEMEA/satools</a>.
     I hope they are useful to you. Questions, comments, feature
     requests, patches (hey, it is open source after all), pull
     requests and cake are all welcomed at <a href=
@@ -94,11 +94,9 @@
 
         <div style="margin-left: 2em">
           Return messages sent to list <i>foo-list</i> where the
-          word <i>linux</i> appears in the message subject (note
-          that currently the quotes are mandatory if the list name
-          contains a hyphen):
+          word <i>linux</i> appears in the message subject:
 
-          <p><b>list:"foo-list" subject:linux</b></p>
+          <p><b>list:foo-list subject:linux</b></p>
         </div>
       </li>
 
@@ -139,10 +137,10 @@
         queries within a certain proximity of eachother. By default
         the <b>NEAR</b> operator matches when there are 10 or fewer
         intervening words; a different limit N may be specified by
-        specifying an operator of the form <b>NEAR/N</b>. The order
-        in which the given words or phrases appear in the message
-        does not have to be the same as the order in which they
-        appear in the query.</p>
+        specifying an operator of the form <b>NEAR(N)</b>. The
+        order in which the given words or phrases appear in the
+        message does not have to be the same as the order in which
+        they appear in the query.</p>
 
         <div style="margin-left: 2em">
           Return messages containing the words <i>linux</i> and
@@ -155,7 +153,7 @@
           Return messages containing the words <i>linux</i> and
           <i>kernel</i> with not more than 5 intervening words:
 
-          <p><b>linux NEAR/5 kernel</b></p>
+          <p><b>linux NEAR(5) kernel</b></p>
         </div>
 
         <div style="margin-left: 2em">
@@ -163,7 +161,7 @@
           system</i> and word <i>linux</i> with not more than 2
           words separating the two:
 
-          <p><b>linux NEAR/2 "operating system"</b></p>
+          <p><b>linux NEAR(2) "operating system"</b></p>
         </div>
       </li>
 
